@@ -1,0 +1,44 @@
+{
+
+    "name": "backend",
+
+    "version": "1.0.0",
+
+    "description": "Sistema de Clientes - Backend",
+
+    "scripts": {
+
+        "start": "nest start",
+
+        "start:dev": "nest start --watch",
+
+        "build": "nest build"
+
+    },
+
+    "dependencies": {
+
+        "@nestjs/common": "^10.4.20",
+
+        "@nestjs/core": "^10.4.20",
+
+        "@nestjs/platform-express": "^10.4.20",
+
+        "@nestjs/typeorm": "^11.0.0",
+
+        "pg": "^8.16.3",
+
+        "reflect-metadata": "^0.2.2",
+
+        "typeorm": "^0.3.27"
+
+    },
+
+    "devDependencies": {
+
+        "@nestjs/cli": "^10.0.0"
+
+    }
+
+}
+
