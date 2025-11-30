@@ -1,6 +1,9 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { useWindowDimensions } from "react-native";
 import { colors } from "../themes/colors";
+import { ClientesScreen } from "../screens/clientes/ClientesScreen";
+import { PedidosScreen } from "../screens/pedidos/PedidosScreen";
+import { PagosScreen } from "../screens/pagos/PagosScreen";
 
 export type RootDrawerNavigator = {
 
