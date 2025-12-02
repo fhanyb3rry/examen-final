@@ -25,10 +25,6 @@ export class Cliente {
   @Column({ name: 'fecha_registro', type: 'date' })
   fecha_registro: Date;
 
-  // ⬇ QUITAR COMPLETAMENTE ESTE CAMPO ⬇
-  // @Column({ type: 'boolean', default: true })
-  // activo: boolean;
-
   @OneToMany(() => Pedido, (pedido) => pedido.cliente)
   pedidos: Pedido[];
 

@@ -4,10 +4,10 @@ import { Cliente } from '../types';
 export const clientesService = {
     findClientesActivos: async (): Promise<Cliente[]> => {
         try {
-            // Usa el endpoint que SÍ existe
-            const response = await api.get('/clientes/con-totales'); // ⬅️ Cambia a ESTE
             
-            // ⬇️ TRANSFORMA para ELIMINAR 'activo' si viene
+            const response = await api.get('/clientes/con-totales'); 
+            
+            
             return response.data.map((item: any) => ({
                 id_cliente: item.id_cliente,
                 nombre: item.nombre,
@@ -16,9 +16,8 @@ export const clientesService = {
                 telefono: item.telefono,
                 direccion: item.direccion,
                 fecha_registro: item.fecha_registro,
-                // ⬇️ NO incluyas 'activo' aunque venga en la respuesta
-                // total_pedidos: item.total_pedidos, // Si necesitas estos campos
-                // cantidad_pedidos: item.cantidad_pedidos,
+                
+
             }));
         } catch (error) {
             console.error('Error en findClientesActivos:', error);
@@ -28,9 +27,9 @@ export const clientesService = {
 
     findAll: async (): Promise<Cliente[]> => {
         try {
-            const response = await api.get('/clientes/con-totales'); // ⬅️ Cambia también aquí
+            const response = await api.get('/clientes/con-totales'); 
             
-            // Misma transformación
+            
             return response.data.map((item: any) => ({
                 id_cliente: item.id_cliente,
                 nombre: item.nombre,
@@ -60,9 +59,9 @@ export const clientesService = {
         try {
             const response = await api.get('/clientes/con-totales');
             
-            // Opcional: también quita 'activo' aquí si quieres consistencia
+            
             return response.data.map((item: any) => {
-                const { activo, ...rest } = item; // ⬅️ Elimina 'activo'
+                const { activo, ...rest } = item; 
                 return rest;
             });
         } catch (error) {
