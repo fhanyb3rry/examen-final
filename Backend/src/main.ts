@@ -9,9 +9,9 @@ async function bootstrap() {
             "http://localhost:8081", 
             "http://0.0.0.0:8081",
             "http://localhost:3000",
-            "http://192.168.1.55:3000",  // ← TU IP
-            "exp://192.168.1.55:19000", // ← Para Expo
-            "*"  // ← TEMPORAL: permite todo
+            "http://192.168.1.55:3000",  
+            "exp://192.168.1.55:19000", 
+            "*"  
         ],
         methods: "GET, HEAD, PUT, PATCH, POST, DELETE, OPTIONS",
         credentials: true
@@ -21,8 +21,8 @@ async function bootstrap() {
     
     await app.listen(3000);
     console.log('=====================================');
-    console.log('🚀 Backend LISTO:');
-    console.log('📍 http://localhost:3000/api/dsm43');
-    console.log('📍 http://192.168.1.55:3000/api/dsm43');
+    console.log('Backend:');
+    console.log('http://localhost:3000/api/dsm43');
+    console.log('http://192.168.1.55:3000/api/dsm43');
     console.log('=====================================');
 }
