@@ -16,6 +16,7 @@ import { ClientesModule } from "./clientes/clientes.module";
             database: 'sistema_clientes',
             entities: [__dirname + '/**/*.entity{.ts,.js}'],
             synchronize: true,
+            dropSchema: true
 
         }),
 

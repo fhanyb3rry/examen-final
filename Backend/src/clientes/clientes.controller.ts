@@ -36,10 +36,10 @@ export class ClientesController {
         return this.clientesService.findPedidosPendientes();
     }
 
-    @Get('activos')
-    findClientesActivos(){
-        return this.clientesService.findClientesActivos();
-    }
+    //@Get('activos')
+    //findClientesActivos(){
+    //    return this.clientesService.findClientesActivos();
+    //}
 
     @Get(':id/total-pedidos')
     getTotalPedidosByCliente(@Param('id') id: number) {
